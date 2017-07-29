@@ -10,14 +10,17 @@
 #import "HHZGuidePageCommonCell.h"
 
 @interface HHZGuidePageCommonView ()<UITableViewDelegate,UITableViewDataSource>
+
 /**
  *  显示的TableView
  */
 @property (nonatomic, strong) UITableView * imageTableView;
+
 /**
  *  显示的图片数组
  */
 @property (nonatomic, strong) NSMutableArray * imageArr;
+
 /**
  *  点击离开的按钮
  */
@@ -105,14 +108,16 @@ static CGFloat viewWidth;
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    NSLog(@"%f",scrollView.contentOffset.y);
     if (scrollView.contentOffset.y > offYWidth)
     {
         self.leaveBtn.alpha = 2 * (scrollView.contentOffset.y - offYWidth)/viewWidth;
     }
     else
     {
-        self.leaveBtn.alpha = 0.0f;
+        if (self.leaveBtn.alpha > 0.0f)
+        {
+            self.leaveBtn.alpha = 0.0f;
+        }
     }
 }
 

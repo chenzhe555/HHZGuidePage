@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+
 @protocol HHZGuidePageCommonViewDelegate <NSObject>
 /**
  *  点击立即体验退出按钮
