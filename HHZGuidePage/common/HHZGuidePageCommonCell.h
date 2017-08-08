@@ -9,10 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface HHZGuidePageCommonCell : UITableViewCell
-/**
- *  填充现在显示的图片
- */
--(void)fillGuideImage:(UIImage *)img;
-
 +(HHZGuidePageCommonCell *)configCell:(UITableView *)tableView IndexPath:(NSIndexPath *)indexPath imageArr:(NSArray *)arr size:(CGSize)size;
 @end
